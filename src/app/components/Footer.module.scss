@@ -1,0 +1,118 @@
+// Imports shared variables for consistent styling
+@import '../variables.scss';
+
+// Defines the core appearance and spacing for the footer
+.footer {
+  background-color: $deep-forest;
+  color: $parchment-glow;
+  padding: 3rem 0 1.5rem;
+  position: relative;
+  margin: 0 10px;
+  border-radius: 8px;
+}
+
+// Ensures content within the footer is centered and bounded by a maximum width
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 2rem;
+  position: relative;
+}
+
+// Holds the navigation links positioned near the top of the footer
+.top {
+  display: flex;
+  gap: 4rem;
+  position: absolute;
+  top: -40px;
+  left: 65%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  border-radius: 8px;
+
+  a {
+    color: $parchment-glow;
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Arranges the privacy policy and contact info sections at the bottom
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+// Displays brief contact information, like address or phone, in line
+.contactInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+// Styles links such as the privacy policy and email references
+.link {
+  color: $parchment-glow;
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Responsive adjustments for mid-sized screens (tablets)
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .top {
+    position: static;
+    transform: none; 
+    margin-top: 1rem;
+    justify-content: center;
+    gap: 2rem; 
+  }
+
+  .bottom {
+    gap: 2rem;
+  }
+}
+
+// Further adjustments for mobile screen sizes
+@media (max-width: 480px) {
+  .footer {
+    padding: 2rem 0 1rem;
+    margin: 0 5px;
+  }
+
+  .top {
+    margin-top: 0.5rem;
+    gap: 1rem; 
+    padding: 8px 16px;
+  }
+
+  .bottom {
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .contactInfo {
+    gap: 4px;
+  }
+
+  .link {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,38 @@
+// Base variable import for color and global styling
+@import './variables.scss';
+
+// Import font families for use throughout the application
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap');
+
+// Global default body styles
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans';
+  color: $charcoal-veil;
+  background-color: $parchment-glow;
+}
+
+// Main heading style
+h1 {
+  font-family: 'Varela', sans-serif;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 400;
+}
+
+// Secondary heading style
+h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 40px;
+  line-height: 46px;
+  font-weight: 700;
+}
+
+// Tertiary heading style
+h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 500;
+}

@@ -1,0 +1,72 @@
+// Imports shared variables for color and other settings
+@import '../variables.scss';
+
+// Styles the header, fixed near the top with a box-shadow
+.header {
+  position: fixed;
+  top: 5px;
+  left: 10px;
+  right: 10px;
+  width: calc(100% - 20px);
+  background: white;
+  box-shadow: 0 6px 12px $misty-meadow;
+  border-radius: 12px;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 999;
+}
+
+// Navigation container within the header
+.nav {
+  display: flex;
+  gap: 40px;
+  padding: 10px;
+}
+
+// Individual navigation links with hover effect
+.link {
+  text-decoration: none;
+  color: $deep-forest;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 20px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Adds extra spacing for the last link
+.link:last-child {
+  margin-right: 40px;
+}
+
+// Adjusts layout for tablets and mid-sized screens
+@media (max-width: 768px) {
+  .nav {
+    gap: 20px;
+    padding: 8px;
+  }
+
+  .link {
+    padding: 15px;
+  }
+}
+
+// Further adjusts layout for mobile screens
+@media (max-width: 480px) {
+  .nav {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 6px;
+  }
+
+  .link {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .link:last-child {
+    margin-right: 0;
+  }
+}
